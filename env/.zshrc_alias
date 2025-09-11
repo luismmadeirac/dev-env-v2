@@ -1,0 +1,19 @@
+alias sz='source ~/.zshrc'
+
+alias c='clear'
+
+
+# Services
+alias d='docker'
+alias k='kubectl'
+alias h='helm'
+alias tf='terraform'
+
+alias t='tmux'
+alias v='nvim'
+
+# Jump to places
+alias p='cd $HOME/personal'
+alias work='cd $HOME/work'
+alias vaults='cd $HOME/vaults'
+alias de='cd $HOME/personal/dev-env-v2'

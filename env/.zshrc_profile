@@ -1,0 +1,41 @@
+
+export CONFIG_HOME=$HOME/.config
+
+VIM="nvim"
+
+PERSONAL=$CONFIG_HOME/personal
+DEV_ENV=$HOME/Developer/dev-env-v2/
+
+export GOPATH=$HOME/.local/go
+export GIT_EDITOR=$VIM
+export DEV_ENV_HOME="$HOME/Developer/dev-env-v2"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s '\eh' "tmux-sessionizer -s 0\n"
+bindkey -s '\et' "tmux-sessionizer -s 1\n"
+bindkey -s '\en' "tmux-sessionizer -s 2\n"
+bindkey -s '\es' "tmux-sessionizer -s 3\n"
+
+addToPath() {
+  if [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$PATH:$1
+  fi
+}
+
+addToPathFront() {
+  if [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$1:$PATH
+  fi
+}
+
+addToPathFront $HOME/.local/.npm-global/bin
+addToPathFront $HOME/.local/scripts
+addToPathFront $HOME/.local/bin
+addToPathFront $HOME/.local/npm/bin
+addToPathFront $HOME/.local/n/bin/
+
+addToPathFront $HOME/.local/go/bin
+addToPathFront /usr/local/go/bin
+addToPath $HOME/.local/personal

@@ -1,0 +1,10 @@
+# --------------------------------------------------------
+# Absolutly useless scripts
+
+alias batman="$HOME/.local/scripts/batman.sh"
+alias bg="$HOME/.local/scripts/switch-bg.sh"
+alias bo="$HOME/.local/iscripts/bg-black.sh"
+
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias dark="osascript -e 'tell application \"System Events\" to tell appearance preferences to set dark mode to true'"
+alias light="osascript -e 'tell application \"System Events\" to tell appearance preferences to set dark mode to false'"
