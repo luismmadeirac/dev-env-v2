@@ -11,7 +11,7 @@ This will kick off a series of script files that will both change a lot of syste
 For a full explanation and guide of what this bootstrap script does and what sub-scripts it runs, please check the [documentation here](./).
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/luismmadeirac/dev-envi-v2/main/resources/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/luismmadeirac/dev-env-v2/main/setup/bootstrap.sh | bash
 
 **[IMPORTANT]:**
 
