@@ -1,6 +1,6 @@
 # Neovim Cheat Sheet  ![Status: Updated](https://img.shields.io/badge/Status-Updated-green)
 
-Last updated: Sep, 14th 2025
+Last updated: Sep, 15th 2025
 
 ## Leader Key
 
@@ -177,6 +177,17 @@ Last updated: Sep, 14th 2025
 
 ## Plugin Keybindings
 
+### Telescope (Fuzzy Finder)
+
+| Keybinding | Description |
+| :--------- | :---------- |
+| `<leader>pf` | Find files in project |
+| `<C-p>` | Find git tracked files |
+| `<leader>ps` | Search in project (grep with input) |
+| `<leader>pws` | Search word under cursor |
+| `<leader>pWs` | Search WORD under cursor |
+| `<leader>vh` | Help tags search |
+
 ### Harpoon (Quick File Navigation)
 
 | Keybinding | Description |
@@ -207,10 +218,11 @@ Last updated: Sep, 14th 2025
 
 | Keybinding | Description |
 | :--------- | :---------- |
-| `<leader>tt` | Toggle floating terminal |
-| `<leader>th` | Toggle horizontal terminal |
-| `<leader>tv` | Toggle vertical terminal |
+| `<leader>tt` | Toggle floating terminal (20 lines) |
+| `<leader>th` | Toggle horizontal terminal (20 lines) |
+| `<leader>tv` | Toggle vertical terminal (30 cols) |
 | `<Esc><Esc>` (terminal) | Exit terminal mode |
+| `<C-\>` | Default terminal toggle mapping |
 
 ### Zen Mode
 
@@ -236,7 +248,10 @@ Last updated: Sep, 14th 2025
 | :--------- | :---------- |
 | `<C-f>` | Open tmux project sessionizer |
 
-**What it does:** Opens a fuzzy finder to select and switch between projects in tmux sessions.
+**What it does:** Opens a fuzzy finder to select and switch between projects in tmux sessions. Searches through:
+- Predefined project directories (~/Developer, ~/personal, ~/work, ~/.config, ~/.local/scripts)
+- Up to 20 subdirectories in ~/Developer (depth 1-2)
+- Creates new tmux session if needed or switches to existing one
 
 ---
 
@@ -346,17 +361,19 @@ Last updated: Sep, 14th 2025
 - **Lazy.nvim** - Plugin manager
 - **LSP** - Language server support with Mason
 - **nvim-cmp** - Completion engine
-- **Harpoon** - Quick file navigation
-- **Oil.nvim** - File explorer
+- **Telescope** - Fuzzy finder for files, text, help tags
+- **Harpoon 2** - Quick file navigation and marking
+- **Oil.nvim** - File explorer with floating window
 - **UndoTree** - Undo history visualizer
-- **ToggleTerm** - Terminal integration
-- **Rose Pine & Tokyo Night** - Color themes
-- **Zen Mode** - Distraction-free writing
+- **ToggleTerm** - Terminal integration with multiple layouts
+- **Rose Pine & Tokyo Night & Brightburn** - Color themes
+- **Zen Mode** - Distraction-free writing with line numbers toggle
+- **Treesitter** - Better syntax highlighting and parsing
 
 ### Theme Information
 
 **Default theme:** Rose Pine Moon
-**Available themes:** Rose Pine (variants), Tokyo Night (variants), Brightburn
+**Available themes:** Rose Pine (main, moon, dawn), Tokyo Night (storm, night, day), Brightburn
 
 ---
 
@@ -374,10 +391,11 @@ Last updated: Sep, 14th 2025
 ### Workflow Recommendations
 
 1. **Project Navigation:** `<C-f>` → Select project → Start coding
-2. **File Navigation:** `<leader>h` (Harpoon) for frequently used files, `-` for exploration
-3. **Code Navigation:** `gd`, `<leader>vrr`, `K` for understanding codebase
-4. **Editing:** Use text objects and custom clipboard mappings for efficiency
-5. **Focus:** Use `<leader>zz` for distraction-free coding sessions
+2. **File Finding:** `<C-p>` for git files, `<leader>pf` for all files, `<leader>ps` for text search
+3. **File Navigation:** `<leader>h` (Harpoon) for frequently used files, `-` for exploration
+4. **Code Navigation:** `gd`, `<leader>vrr`, `K` for understanding codebase
+5. **Editing:** Use text objects and custom clipboard mappings for efficiency
+6. **Focus:** Use `<leader>zz` for distraction-free coding sessions
 
 ---
 
