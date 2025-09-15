@@ -12,6 +12,7 @@ For a full explanation and guide of what this bootstrap script does and what sub
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/luismmadeirac/dev-env-v2/main/setup/bootstrap.sh | bash
+```
 
 **[IMPORTANT]:**
 
@@ -25,14 +26,3 @@ There is a script called [dev-env](./) that's mostly responsible for the develop
 
 There are a couple of scripts in the [scripts dir](./env/.local/scripts) that are absolutely worthless and get mapped in the [.zsh_alias_scripts]().
 
-## Repository Structure
-
-```bash
-.
-├── dev-env.sh
-├── docs/
-├── env/
-└── README.md/ # You are here!
-```
-```
-```
